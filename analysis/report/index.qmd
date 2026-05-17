@@ -1,6 +1,5 @@
 ---
 title: "Launching AWS EC2 Instances with Bash Scripts and the AWS CLI"
-subtitle: "A scripted approach to repeatable server provisioning on Amazon Web Services"
 author: "Ronald 'Ryy' G. Thomas"
 date: "2023-04-12"
 categories: [aws, shell]
@@ -22,7 +21,7 @@ format:
 ---
 
 ![A cloud server rack symbolising the automation of virtual infrastructure
-through command-line scripting.](media/images/hero.jpg){.img-fluid width=80%}
+through command-line scripting.](media/images/hero.jpg){.img-fluid width=80% fig-align="center"}
 
 *Automating cloud infrastructure removes repetitive manual steps and lets you
 focus on the work that matters.*
