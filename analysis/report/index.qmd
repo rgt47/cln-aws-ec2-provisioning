@@ -20,9 +20,9 @@ format:
     code-tools: false
 ---
 
-![A cloud server rack symbolising the automation of virtual infrastructure
-through command-line scripting.](media/images/hero.jpg){.img-fluid
-width=80% fig-align="center"}
+*2026-05-17 17:08 PDT*
+
+![  ](media/images/hero.jpg){.img-fluid width=80% fig-align="center"}
 
 *Automating cloud infrastructure removes repetitive manual steps and lets
 you focus on the work that matters.*
@@ -915,3 +915,8 @@ I would enjoy hearing from you if:
   research.
 - You have questions about anything in this tutorial.
 - You just want to say hello and connect.
+
+---
+
+*Rendered on 2026-05-17 at 17:08 PDT.*<br>
+*Source: ~/prj/qblog/posts/22-serversetupawscli/serversetupawscli/analysis/report/index.qmd*
