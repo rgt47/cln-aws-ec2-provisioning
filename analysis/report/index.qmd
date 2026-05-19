@@ -24,8 +24,8 @@ format:
 
 ![  ](media/images/hero.jpg){.img-fluid width=80% fig-align="center"}
 
-*Automating cloud infrastructure removes repetitive manual steps and lets
-you focus on the work that matters.*
+*Automating cloud infrastructure removes repetitive manual steps and
+frees attention for the work that matters.*
 
 
 # Introduction
@@ -41,13 +41,13 @@ This post covers the first part in full.
 
 There are two well-defined entry points to AWS EC2 provisioning: the
 interactive web console and the `aws` CLI. The console is a good way to
-understand what each component does; the CLI is a better choice once you
-have launched the same configuration more than twice. This post documents
-both paths. They reach the same terminal state (a running Ubuntu instance
-with a security group, key pair, Elastic IP, and Docker installed). The
-choice is a matter of how often you expect to repeat the operation.
+understand what each component does; the CLI is a better choice once the
+same configuration has been launched more than twice. We document both
+paths. They reach the same terminal state (a running Ubuntu instance with
+a security group, key pair, Elastic IP, and Docker installed). The
+choice is a matter of how often one expects to repeat the operation.
 
-This post covers Layer 11 (Cloud) of the workflow architecture described
+We cover Layer 11 (Cloud) of the workflow architecture described
 in [post 52](/posts/52-workflow-construct/).
 
 
@@ -84,10 +84,9 @@ session.](media/images/ambiance1.jpg){.img-fluid}
 
 Amazon Elastic Compute Cloud (EC2) is a service that provides resizable
 virtual servers in the cloud. Think of it as renting a computer that lives
-in an Amazon data centre. You choose the operating system, the amount of
-memory and storage, and the network configuration. Once launched, you
-connect to it over SSH just as you would connect to any remote Linux
-machine.
+in an Amazon data centre. One chooses the operating system, the amount of
+memory and storage, and the network configuration. Once launched, one
+connects over SSH just as one would connect to any remote Linux machine.
 
 The key distinction from a managed hosting platform is control: you manage
 everything on the server yourself, from the operating system packages to
@@ -104,8 +103,8 @@ hours per month of `t2.micro` instance usage for the first 12 months.
 
 # The Four Pre-Launch Components
 
-Regardless of whether you use the console or the CLI, four components must
-be in place before launching an instance:
+Regardless of whether the console or the CLI is used, four components
+must be in place before launching an instance:
 
 1. **SSH key pair**: allows encrypted remote login to the server.
 2. **Security group (firewall)**: restricts incoming traffic to named
