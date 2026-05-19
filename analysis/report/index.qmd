@@ -37,7 +37,7 @@ laptop. 'Works on my machine' is not a deployment strategy.
 
 The challenge had two parts: first, create and launch a virtual server in
 the cloud; second, configure that server to host the application securely.
-This post covers the first part in full.
+We cover the first part in full.
 
 There are two well-defined entry points to AWS EC2 provisioning: the
 interactive web console and the `aws` CLI. The console is a good way to
@@ -88,10 +88,10 @@ in an Amazon data centre. One chooses the operating system, the amount of
 memory and storage, and the network configuration. Once launched, one
 connects over SSH just as one would connect to any remote Linux machine.
 
-The key distinction from a managed hosting platform is control: you manage
-everything on the server yourself, from the operating system packages to
-the web server configuration. This requires more effort, but it provides
-complete flexibility over the software stack.
+The key distinction from a managed hosting platform is control: the
+operator manages everything on the server, from the operating system
+packages to the web server configuration. This requires more effort,
+but it provides complete flexibility over the software stack.
 
 There are several cloud server hosting options: Microsoft Azure, Oracle,
 Google Cloud, Amazon AWS, Digital Ocean, and Hetzner. Each has its own
@@ -144,8 +144,8 @@ understanding the components and their relationships. After two or three
 manual launches, the CLI path below will be more efficient.
 
 Open the EC2 console at `https://aws.amazon.com/console`, choose the
-regional service closest to your location (e.g., N. California), and
-navigate to the EC2 dashboard.
+regional service closest to the operator's location (e.g., N.
+California), and navigate to the EC2 dashboard.
 
 I recommend configuring the four pre-launch components before launching
 the instance, as it saves back-and-forth with the console.
@@ -220,7 +220,7 @@ it with the static IP:
 2. Click on `rgtlab.org` in the centre panel.
 3. Check the `rgtlab.org` Type A record.
 4. Click **Edit record** in the right panel.
-5. Change the IP address in the **Value** field to your allocated Elastic
+5. Change the IP address in the **Value** field to the allocated Elastic
    IP.
 
 
@@ -277,8 +277,8 @@ The `aws configure` command prompts for four values:
 
 ## Configuration
 
-Nine parameters are required for automated instance generation. Store
-eight of them as environment variables in `~/.zshrc` (or equivalent) so
+Nine parameters are required for automated instance generation. Eight
+are stored as environment variables in `~/.zshrc` (or equivalent) so
 every script can reference them without hardcoded values.
 
 **VPC and Subnet** (found on the EC2 dashboard under Your VPCs):
@@ -549,7 +549,7 @@ The startup script runs as root on first boot only. If it fails, check
 
 # Connecting to the Server
 
-Construct a `config` file in `~/.ssh/` so you can connect with a simple
+Construct a `config` file in `~/.ssh/` to connect with a simple
 hostname rather than remembering the IP address and key path:
 
 ```sh
@@ -621,31 +621,32 @@ correctly configured.
    `aws ec2 describe-security-groups` before running the script.
 
 2. **Key pair names must also be unique.** A duplicate name causes a CLI
-   error. Delete the old pair first if you need to regenerate.
+   error. Delete the old pair first if regeneration is needed.
 
-3. **The Elastic IP must be allocated before association.** If you have
-   not yet allocated a static IP, the associate command in Script 3 will
+3. **The Elastic IP must be allocated before association.** If a static
+   IP has not yet been allocated, the associate command in Script 3 will
    fail silently.
 
 4. **The startup script runs as root on first boot only.** If the
-   bootstrap script has an error, you must terminate the instance and
-   launch a new one. There is no way to re-run user-data on an existing
-   instance.
+   bootstrap script has an error, the instance must be terminated and
+   a new one launched. There is no way to re-run user-data on an
+   existing instance.
 
-5. **Environment variables are session-scoped.** If you open a new
-   terminal without sourcing `.zshrc`, the scripts will fail because the
+5. **Environment variables are session-scoped.** Opening a new terminal
+   without sourcing `.zshrc` means the scripts will fail because the
    variables are not set. Verify with `echo $vpc_id` before running any
    script.
 
-6. **AWS CLI commands are region-specific.** Ensure your `aws configure`
-   region matches the region where you allocated your VPC and Elastic IP.
+6. **AWS CLI commands are region-specific.** The `aws configure`
+   region must match the region where the VPC and Elastic IP were
+   allocated.
 
 7. **The free tier storage limit is 30 GB.** Choosing less than 30 GB
    may seem sufficient initially, but Docker images and system packages
    accumulate quickly.
 
 8. **The `--cidr "0.0.0.0/0"` rule opens a port to the entire internet.**
-   Restrict this to your own IP in production environments.
+   Restrict this to the operator's IP in production environments.
 
 
 # Uninstall / Rollback
@@ -664,7 +665,7 @@ in order:
 5. **Remove local SSH config.** Delete the entry from `~/.ssh/config` and
    remove the key file: `rm ~/.ssh/power1_app.pem`
 
-To remove the AWS CLI from your workstation:
+To remove the AWS CLI from the workstation:
 
 ```sh
 rm -i ~/.aws/credentials ~/.aws/config
@@ -715,8 +716,8 @@ automation.](media/images/ambiance3.jpg){.img-fluid}
 
 - Forgetting to `chmod 400` the PEM file will cause SSH to reject the
   connection with a permissions error.
-- If you delete a security group while an instance references it, the
-  deletion will fail. Terminate the instance first.
+- Deleting a security group while an instance references it will cause
+  the deletion to fail. Terminate the instance first.
 - Running out of disk space during Docker builds is a common issue on
   instances with less than 30 GB of storage.
 - The EC2 console interface changes periodically. Screenshots in tutorials
@@ -766,15 +767,18 @@ windows into the same API. Once that relationship becomes clear, every
 console action suggests a corresponding scriptable command, and the scope
 for automation expands considerably.
 
-**Main takeaways:**
-
-- Four bash scripts replace the entire EC2 console provisioning workflow.
-- Eight environment variables parameterise the scripts, making them
-  reusable across projects.
-- The teardown procedure is equally important. Orphaned resources
-  accumulate charges.
-- The console path is valuable for learning. The CLI path is more
-  efficient for repetition.
+In conclusion, four points merit emphasis. First,
+four bash scripts replace the entire EC2 console
+provisioning workflow, reducing a multi-step manual
+process to a single command sequence. Second, eight
+environment variables parameterise the scripts,
+making them reusable across projects without
+hardcoded values. Third, the teardown procedure is
+equally important: orphaned Elastic IPs and unused
+volumes accumulate charges that are easy to overlook.
+Fourth, the console path is valuable for learning the
+component relationships, while the CLI path is more
+efficient for any repeated provisioning.
 
 
 # See Also
