@@ -18,6 +18,8 @@ format:
   html:
     code-fold: false
     code-tools: false
+cluster: clinical-and-cloud
+cluster-order: 2
 ---
 
 *2026-05-17 17:08 PDT*
@@ -923,3 +925,13 @@ I would enjoy hearing from you if:
 
 *Rendered on 2026-05-17 at 17:08 PDT.*<br>
 *Source: ~/prj/qblog/posts/22-serversetupawscli/serversetupawscli/analysis/report/index.qmd*
+
+## Related posts in this cluster
+
+This post is part of the *Clinical Trials and Cloud Deployment* series.
+Recommended reading order:
+
+1. Post 95: [Clinical Trial Data Validation Across Languages](../95-cln-multilang-trial-validation/)
+2. **Post 96: Provisioning AWS EC2 Instances** (this post)
+3. Post 97: [Running ZZedc Independently for Clinical Trials](../97-cln-zzedc-investigator-independence/)
+
