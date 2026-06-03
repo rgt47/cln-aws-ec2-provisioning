@@ -7,7 +7,7 @@ description: >
   Setting up an AWS EC2 instance from scratch, with two parallel paths:
   a console walkthrough for understanding the components, and four bash
   scripts for repeatable CLI automation.
-image: "media/images/hero.jpg"
+image: "media/images/hero.png"
 document-type: "blog"
 draft: false
 execute:
@@ -24,7 +24,7 @@ cluster-order: 2
 
 *2026-05-17 17:08 PDT*
 
-![  ](media/images/hero.jpg){.img-fluid width=80% fig-align="center"}
+![  ](media/images/hero.png){.img-fluid width=80% fig-align="center"}
 
 *Automating cloud infrastructure removes repetitive manual steps and
 frees attention for the work that matters.*
