@@ -9,7 +9,7 @@ description: >
   scripts for repeatable CLI automation.
 image: "media/images/hero.png"
 document-type: "blog"
-draft: false
+draft: true
 execute:
   echo: true
   warning: false
@@ -79,7 +79,7 @@ in [post 52](/posts/52-workflow-construct/).
 
 
 ![A clean workstation poised at the start of a focused provisioning
-session.](media/images/ambiance1.jpg){.img-fluid}
+session.](media/images/ambiance1.png){.img-fluid}
 
 
 # What is AWS EC2?
@@ -437,7 +437,7 @@ chmod 400 "$HOME/.ssh/$key_pair_name.pem"
 
 ![Server racks in a data centre conveying the physical infrastructure
 behind virtual cloud
-instances.](media/images/ambiance2.jpg){.img-fluid}
+instances.](media/images/ambiance2.png){.img-fluid}
 
 
 ## Script 3: Launch the EC2 Instance
@@ -681,7 +681,7 @@ Always run the full teardown when a project is complete.
 
 ![A calm workspace with a laptop and notebook, representing the planning
 that goes into infrastructure
-automation.](media/images/ambiance3.jpg){.img-fluid}
+automation.](media/images/ambiance3.png){.img-fluid}
 
 
 # What Did We Learn?
