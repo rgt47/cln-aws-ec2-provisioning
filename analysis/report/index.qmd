@@ -1,6 +1,6 @@
 ---
 title: "Provisioning AWS EC2 Instances: Console and CLI Methods"
-author: "Ronald 'Ryy' G. Thomas"
+author: "Ronald G. Thomas"
 date: "2026-05-17"
 categories: [aws, shell, shiny, docker]
 description: >
