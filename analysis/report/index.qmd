@@ -43,7 +43,7 @@ a security group, key pair, Elastic IP, and Docker installed). The
 choice is a matter of how often one expects to repeat the operation.
 
 We cover Layer 11 (Cloud) of the workflow architecture described
-in [post 52](/posts/52-workflow-construct/).
+in [A Workflow Construct for the Modern Data Scientist](../wf-construct-overview-anchor/).
 
 
 ## Motivations
@@ -117,7 +117,7 @@ After launch, post-launch tasks include installing a web server, obtaining
 an SSL certificate, and configuring a reverse proxy to translate HTTPS
 (port 443) requests to Shiny (port 3838). Those steps are covered in the
 companion post on
-[Dockerizing a Shiny application](/posts/33-shareshinycodeviadocker/).
+[Sharing R Code via Docker](../zc-share-rmd-via-docker/).
 
 
 # Prerequisites
@@ -781,15 +781,15 @@ efficient for any repeated provisioning.
 **Related posts:**
 
 - [Sharing R Code via Docker: R Markdown and
-  Shiny](/posts/32-sharermdcodeviadocker/): post-launch server
+  Shiny](../zc-share-rmd-via-docker/): post-launch server
   configuration and application deployment.
-- [Creating a GitHub Dotfiles Repository](/posts/24-setupdotfilesongithub/):
+- [Multi-Laptop macOS Bootstrap](../wf-multi-laptop-dotfiles-bootstrap/):
   managing configuration files across machines.
-- [Configure the Command Line for Data
-  Science](/posts/01-configtermzsh/): terminal and shell setup.
+- [Unix Command-Line Workspace Setup for Data
+  Science](../wf-unix-workspace-config/): terminal and shell setup.
 - [A Workflow Construct for the Modern Data
-  Scientist](/posts/52-workflow-construct/): the 13-layer reference
-  architecture that contextualises the Cloud layer.
+  Scientist](../wf-construct-overview-anchor/): the reference
+  architecture that contextualizes the Cloud layer.
 
 **Key resources:**
 
@@ -917,7 +917,7 @@ I would enjoy hearing from you if:
 ---
 
 *Rendered on 2026-05-17 at 17:08 PDT.*<br>
-*Source: ~/prj/qblog/posts/22-serversetupawscli/serversetupawscli/analysis/report/index.qmd*
+*Source: ~/prj/rgtlab/posts/cln-aws-ec2-provisioning/index.qmd*
 
 ## Related posts in this cluster
 
