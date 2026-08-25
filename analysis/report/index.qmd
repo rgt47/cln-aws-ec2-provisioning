@@ -924,7 +924,7 @@ I would enjoy hearing from you if:
 This post is part of the *Clinical Trials and Cloud Deployment* series.
 Recommended reading order:
 
-1. Post 95: [Clinical Trial Data Validation Across Languages](../95-cln-multilang-trial-validation/)
+1. Post 95: [Clinical Trial Data Validation Across Languages](../cln-multilang-trial-validation/)
 2. **Post 96: Provisioning AWS EC2 Instances** (this post)
-3. Post 97: [Running ZZedc Independently for Clinical Trials](../97-cln-zzedc-investigator-independence/)
+3. Post 97: [Running ZZedc Independently for Clinical Trials](../cln-zzedc-investigator-independence/)
 
