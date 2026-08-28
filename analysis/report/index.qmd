@@ -79,7 +79,7 @@ session.](media/images/ambiance1.png){.img-fluid height=2.5in}
 
 Amazon Elastic Compute Cloud (EC2) is a service that provides resizable
 virtual servers in the cloud. Think of it as renting a computer that lives
-in an Amazon data centre. One chooses the operating system, the amount of
+in an Amazon data center. One chooses the operating system, the amount of
 memory and storage, and the network configuration. Once launched, one
 connects over SSH just as one would connect to any remote Linux machine.
 
@@ -212,7 +212,7 @@ Route 53). Once a domain name is acquired (e.g., `rgtlab.org`), associate
 it with the static IP:
 
 1. Click **Hosted zones** in the side panel.
-2. Click on `rgtlab.org` in the centre panel.
+2. Click on `rgtlab.org` in the center panel.
 3. Check the `rgtlab.org` Type A record.
 4. Click **Edit record** in the right panel.
 5. Change the IP address in the **Value** field to the allocated Elastic
@@ -324,7 +324,7 @@ region are configured correctly.
 ## Script 1: Create Security Group
 
 Creates a firewall and opens specified ports. The `-n` flag sets the group
-name; `-p` adds a port. Default behaviour opens ports 22 and 443 only.
+name; `-p` adds a port. Default behavior opens ports 22 and 443 only.
 
 ```sh
 aws_create_security_group.sh -n power1_app -p 22 -p 80 -p 443
@@ -428,7 +428,7 @@ chmod 400 "$HOME/.ssh/$key_pair_name.pem"
 ```
 
 
-![Server racks in a data centre conveying the physical infrastructure
+![Server racks in a data center conveying the physical infrastructure
 behind virtual cloud
 instances.](media/images/ambiance2.png){.img-fluid height=3.5in}
 
@@ -679,7 +679,7 @@ automation.](media/images/ambiance3.png){.img-fluid height=3.5in}
 
 # What Did We Learn?
 
-## Lessons Learnt
+## Lessons Learned
 
 **Conceptual Understanding:**
 
@@ -694,7 +694,7 @@ automation.](media/images/ambiance3.png){.img-fluid height=3.5in}
   configuration management, tools such as Ansible or cloud-init are more
   appropriate.
 - Cloud servers are ordinary Linux machines running in someone else's data
-  centre. The mental model of 'remote laptop' is surprisingly accurate.
+  center. The mental model of 'remote laptop' is surprisingly accurate.
 
 **Technical Skills:**
 
@@ -766,7 +766,7 @@ In conclusion, four points merit emphasis. First,
 four bash scripts replace the entire EC2 console
 provisioning workflow, reducing a multi-step manual
 process to a single command sequence. Second, eight
-environment variables parameterise the scripts,
+environment variables parameterize the scripts,
 making them reusable across projects without
 hardcoded values. Third, the teardown procedure is
 equally important: orphaned Elastic IPs and unused
