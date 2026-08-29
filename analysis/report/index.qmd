@@ -6,7 +6,7 @@ categories: [aws, shell, shiny, docker]
 description: "Setting up an AWS EC2 instance from scratch, with two parallel paths: a console walkthrough for understanding the components, and four bash scripts for repeatable CLI automation."
 image: "media/images/hero.png"
 document-type: "blog"
-draft: true
+draft: false
 execute:
   echo: true
   warning: false
