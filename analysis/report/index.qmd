@@ -25,8 +25,8 @@ frees attention for the work that matters.*
 
 # Introduction
 
-I did not really know how virtual servers worked until I had a Shiny app
-running locally and needed to share it with collaborators over the web.
+Sharing a locally running Shiny app with collaborators over the web
+requires a virtual server, and virtual servers were unfamiliar ground.
 The app was finished, the code was clean, and everything worked on my
 laptop. 'Works on my machine' is not a deployment strategy.
 
