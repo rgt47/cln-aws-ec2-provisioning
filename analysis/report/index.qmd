@@ -485,7 +485,7 @@ aws ec2 run-instances \
   "ResourceType=instance,\
 Tags=[{Key=Name,Value=$proj_name}]" \
   --user-data \
-  file://~/Dropbox/prj/c060/aws_startup_code.sh
+  file://~/prj/c060/aws_startup_code.sh
 
 iid0=$(aws ec2 describe-instances \
   --filters "Name=tag:Name,Values=$proj_name" | \
@@ -918,7 +918,7 @@ I would enjoy hearing from you if:
 
 ---
 
-*Rendered on 2026-05-17 at 17:08 PDT.*<br>
+*Rendered on 2026-11-23 at 17:52 PST.*<br>
 *Source: ~/prj/rgtlab/posts/cln-aws-ec2-provisioning/index.qmd*
 
 ## Related posts in this cluster
